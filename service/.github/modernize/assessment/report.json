@@ -1,0 +1,284 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-03-27T09:46:05.438509724Z",
+    "analysisEndTime": "2026-03-27T09:46:27.180335376Z",
+    "status": "Complete",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks",
+      "azure-appservice",
+      "azure-container-apps"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Container Apps"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 4,
+    "totalIncidents": 5,
+    "totalEffort": 21,
+    "charts": {
+      "severity": {
+        "mandatory": 1,
+        "optional": 3,
+        "potential": 1,
+        "information": 0
+      },
+      "category": {
+        "containerization": 1,
+        "jakarta-migration": 1,
+        "local-resource-access": 1,
+        "messaging-service-migration": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 4,
+      "storyPoints": 21,
+      "properties": {
+        "appName": "demo",
+        "jdkVersion": "17",
+        "frameworks": null,
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "azure-message-queue-amqp-02000",
+          "incidentId": "fc78be22-5c4a-4412-a64c-8884e792adff",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 33,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-amqp-02000",
+          "incidentId": "00b78823-765c-47f0-ac76-20d2bbdf7796",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "localhost-00004",
+          "incidentId": "1b5d3e22-09a6-4800-990b-1efbc9cdbbdd",
+          "location": "src/main/java/com/example/rabbitmq/RabbitMQConsumer.java",
+          "locationKind": "File",
+          "line": 14,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "dockerfile-00000",
+          "incidentId": "7c6759fa-593a-482b-b88a-e8c745c5b696",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "jakarta-service-00001",
+          "incidentId": "bef1f1bb-9955-473e-9a2e-dd910a588a76",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 40,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "azure-message-queue-amqp-02000": {
+      "id": "azure-message-queue-amqp-02000",
+      "description": "The application uses Spring AMQP dependency. To migrate a Java application that uses Spring AMQP to Azure, you can follow these recommendations:\n\n * Provision **Azure Service Bus**: Use Azure Service Bus, a fully managed messaging service that offers reliable message queuing and publish/subscribe capabilities.\n\n * Update the application's **messaging connection** details: Modify the Java application's configuration updating the connection information and message queues/topics.\n\n * Configure Azure Service Bus **queues/topics**: Create appropriate queues or topics in Azure Service Bus to align with your application's messaging requirements. Configure access control and security settings as needed.",
+      "title": "Spring AMQP dependency found",
+      "severity": "optional",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/service-bus-messaging",
+          "title": "Azure Service Bus documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/spring-framework/using-service-bus-in-spring-applications",
+          "title": "Use Azure Service Bus in Spring applications"
+        }
+      ],
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=cloud-readiness",
+        "category=messaging-service-migration",
+        "message-queue",
+        "AMQP Client",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "dockerfile-00000": {
+      "id": "dockerfile-00000",
+      "description": "No Dockerfile was found in the project. This suggests the application may not yet be containerized. \nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.",
+      "title": "No Dockerfile found",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://www.baeldung.com/java-dockerize-app",
+          "title": "Dockerizing a Java Application"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=containerization",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "jakarta-service-00001": {
+      "id": "jakarta-service-00001",
+      "description": "The application depends on **Jakarta WebSocket** (`jakarta.websocket.*` or legacy `javax.websocket.*`) APIs, \nwhich enable full-duplex, real-time communication between clients and servers over a single TCP connection.\n\nWhen migrating to Azure:\n- If the application runs in a Jakarta EE container (such as Payara, WildFly, or Tomcat), it can be deployed to **Azure App Service for Java** or containerized and hosted on **Azure Kubernetes Service (AKS)**.\n- For high-scale, event-driven, or globally distributed workloads, consider using **Azure Web PubSub Service** to manage WebSocket connections efficiently and offload real-time message delivery.\n- If deploying on **Azure Container Apps**, you can integrate **Azure Web PubSub** for managed WebSocket support and scalability.\n- Review and configure **sticky sessions**, **connection timeout**, and **TLS termination** settings for stable communication.\n- Use **wss://** for secure communication, and integrate **Azure Active Directory (Entra ID)** for token-based authentication where applicable.",
+      "title": "Detects usage of Jakarta WebSocket APIs",
+      "severity": "potential",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://jakarta.ee/specifications/websocket/",
+          "title": "Jakarta WebSocket Specification"
+        }
+      ],
+      "labels": [
+        "source=java",
+        "source=java-ee",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "domain=cloud-readiness",
+        "category=jakarta-migration",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "localhost-00004": {
+      "id": "localhost-00004",
+      "description": "The app is trying to use localhost, please try to migrate the resource to cloud",
+      "title": "Localhost Usage",
+      "severity": "optional",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=local-resource-access",
+        "localhost",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    }
+  }
+}
