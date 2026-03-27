@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "createdAt": "2026-03-27T09:43:59.2740506Z",
+  "status": "in_progress",
+  "repos": [
+    {
+      "name": "NewsFeedSite.client",
+      "url": "https://github.com/lpdnju/NewsFeedSite.git",
+      "clonePath": "C:\\workspace\\playground\\local-demo\\.github\\modernize\\repos-20260327174343\\NewsFeedSite\\client",
+      "statusFileDirectory": "C:\\workspace\\playground\\local-demo\\.github\\modernize\\repos-20260327174343\\NewsFeedSite\\.github\\modernize\\delegation\\client",
+      "sessionId": "1fbfec35-5bb1-44ea-a905-9f5f3ba5f1a9",
+      "detectedLanguage": "Java",
+      "relativePath": "client"
+    }
+  ]
+}
