@@ -1,0 +1,562 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-05-21T09:56:13.206003919Z",
+    "analysisEndTime": "2026-05-21T09:56:34.663176335Z",
+    "status": "Complete",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-container-apps",
+      "azure-aks",
+      "azure-appservice"
+    ],
+    "targetDisplayNames": [
+      "Azure Container Apps",
+      "Azure Kubernetes Service",
+      "Azure App Service"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 7,
+    "totalIncidents": 12,
+    "totalEffort": 58,
+    "charts": {
+      "severity": {
+        "mandatory": 2,
+        "optional": 9,
+        "potential": 1,
+        "information": 0
+      },
+      "category": {
+        "containerization": 1,
+        "default-encoding": 1,
+        "file-system-management": 1,
+        "java-version-upgrade": 2,
+        "local-resource-access": 1,
+        "messaging-service-migration": 6
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 7,
+      "storyPoints": 58,
+      "properties": {
+        "appName": "democlient",
+        "jdkVersion": "17",
+        "frameworks": null,
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "azure-message-queue-rabbitmq-01000",
+          "incidentId": "850c6acf-b0e9-42f7-99fe-3474fd5919bc",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 32,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-rabbitmq-01000",
+          "incidentId": "a5bfd6bb-62b7-40aa-852b-c162027cc1a2",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 3,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-rabbitmq-01000",
+          "incidentId": "f50d34b3-37e9-4f2e-b83f-748b245406a3",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 4,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-rabbitmq-01000",
+          "incidentId": "8976c1da-d1ea-4586-a01e-beb4ae92547e",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 5,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "30c88ba2-67d1-413a-8d4c-2b6c24e899c3",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 17,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "9d9add96-9845-4576-b1bc-7c9563e059d0",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 18,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-amqp-02000",
+          "incidentId": "5b22c55b-d505-418d-8c15-d196779ae5e2",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 32,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-message-queue-amqp-02000",
+          "incidentId": "2a321d84-7861-4351-9ef1-a1c89d8c61d9",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "localhost-00004",
+          "incidentId": "520af8ab-0afc-4ebf-85de-3bc3af19e4b4",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 17,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "local-storage-00001",
+          "incidentId": "e4ce0ab1-bfb8-43a2-b410-67448ee9bd2c",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 7,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "dockerfile-00000",
+          "incidentId": "e06f8278-3f54-4a99-b707-adc008855424",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "utf-8-by-default-00000",
+          "incidentId": "21c1bf67-ebff-4e83-80f3-9c4287e2571c",
+          "location": "src/main/java/com/example/App.java",
+          "locationKind": "File",
+          "line": 40,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "potential"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "potential"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=openjdk21/openjdk17"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "azure-java-version-02000": {
+      "id": "azure-java-version-02000",
+      "description": "The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.",
+      "title": "Java Version is not the latest LTS",
+      "severity": "optional",
+      "effort": 8,
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=java-upgrade",
+        "category=java-version-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "azure-message-queue-amqp-02000": {
+      "id": "azure-message-queue-amqp-02000",
+      "description": "The application uses Spring AMQP dependency. To migrate a Java application that uses Spring AMQP to Azure, you can follow these recommendations:\n\n * Provision **Azure Service Bus**: Use Azure Service Bus, a fully managed messaging service that offers reliable message queuing and publish/subscribe capabilities.\n\n * Update the application's **messaging connection** details: Modify the Java application's configuration updating the connection information and message queues/topics.\n\n * Configure Azure Service Bus **queues/topics**: Create appropriate queues or topics in Azure Service Bus to align with your application's messaging requirements. Configure access control and security settings as needed.",
+      "title": "Spring AMQP dependency found",
+      "severity": "optional",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/service-bus-messaging",
+          "title": "Azure Service Bus documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/spring-framework/using-service-bus-in-spring-applications",
+          "title": "Use Azure Service Bus in Spring applications"
+        }
+      ],
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=cloud-readiness",
+        "category=messaging-service-migration",
+        "message-queue",
+        "AMQP Client",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "azure-message-queue-rabbitmq-01000": {
+      "id": "azure-message-queue-rabbitmq-01000",
+      "description": "The application uses RabbitMQ. To migrate a Java application that uses RabbitMQ to Azure, you can follow these recommendations:\n\n * Provision **Azure Service Bus**: Replace RabbitMQ with Azure Service Bus, a fully managed messaging service that offers reliable message queuing and publish/subscribe capabilities.\n\n * Update the application's **messaging connection** details: Modify the Java application's configuration updating the connection information and message queues/topics.\n\n * Configure Azure Service Bus **queues/topics**: Create appropriate queues or topics in Azure Service Bus to align with your application's messaging requirements. Configure access control and security settings as needed.",
+      "title": "RabbitMQ usage found",
+      "severity": "optional",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/service-bus-messaging",
+          "title": "Azure Service Bus documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/spring-framework/using-service-bus-in-spring-applications",
+          "title": "Use Azure Service Bus in Spring applications"
+        }
+      ],
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=cloud-readiness",
+        "category=messaging-service-migration",
+        "message-queue",
+        "RabbitMQ Client",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "dockerfile-00000": {
+      "id": "dockerfile-00000",
+      "description": "No Dockerfile was found in the project. This suggests the application may not yet be containerized. \nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.",
+      "title": "No Dockerfile found",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://www.baeldung.com/java-dockerize-app",
+          "title": "Dockerizing a Java Application"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=containerization",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "local-storage-00001": {
+      "id": "local-storage-00001",
+      "description": "When migrating an application that relies on the file system to Azure, it's important to consider the limitations of local storage in a cloud environment.\n An application running inside a container could lose access to a file in local storage.\n\n The following recommendations depend on the function of the file in local storage:\n * Determine the **storage needs** for your application: Ephemeral storage or persistent storage. Ephemeral storage only persists until the cloud environment is restarted. Persistent storage is required for data that needs to persist across restarts.\n \n * If persistent storage is needed, consider **mounting Azure File Share** or **using Azure Blob Storage**. Mount Azure file share allows your application to access files via the mount location. Azure blob storage is a scalable object store for data objects, such as text or binary files.\n\n * **Logging**: Log to standard output and use Azure Monitor to collect and analyze the logs.\n\n * **Caching**: Use Azure Cache for Redis as a cache backing service.\n\n * **Configuration**: Store configuration in Azure App Configuration instead of using the file system. Also store configuration settings in environment variables so that they can be updated without code changes.",
+      "title": "File system - Java IO",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/storage",
+          "title": "Azure Storage documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/storage-mounts-azure-files",
+          "title": "Create an Azure Files volume mount in Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/storage-mounts",
+          "title": "Use storage mounts in Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/azure-monitor/logs/data-platform-logs",
+          "title": "Azure Monitor Logs overview"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/azure-cache-for-redis",
+          "title": "Azure Cache for Redis documentation"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/azure-app-configuration",
+          "title": "Azure App Configuration documentation"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=file-system-management",
+        "storage",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "localhost-00004": {
+      "id": "localhost-00004",
+      "description": "The app is trying to use localhost, please try to migrate the resource to cloud",
+      "title": "Localhost Usage",
+      "severity": "optional",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=local-resource-access",
+        "localhost",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "utf-8-by-default-00000": {
+      "id": "utf-8-by-default-00000",
+      "description": "If not supplied, the `java.io.{{className}}` constructor uses UTF-8 by default. \n If you haven't provided the character set, and UTF-8 is not appropriate for your class, then supply the appropriate character set to the constructor call.",
+      "title": "The 'java.io' constructor defaults to UTF-8",
+      "severity": "potential",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://openjdk.org/jeps/400",
+          "title": "JEP 400: UTF-8 by Default"
+        }
+      ],
+      "labels": [
+        "capability=openjdk18+",
+        "capability=openjdk",
+        "source",
+        "domain=cloud-readiness",
+        "category=default-encoding",
+        "os=windows",
+        "os=linux",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps"
+      ]
+    }
+  }
+}
